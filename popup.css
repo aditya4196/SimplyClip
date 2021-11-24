@@ -32,6 +32,7 @@ p{
     margin: 0;
     padding: 0;
 }
+
 ul{
     list-style: none;
     padding: 0;
@@ -66,6 +67,7 @@ ul li{
     justify-content: space-between;
     height: 100%;
 }
+
 
 .list-div{
     
@@ -108,7 +110,25 @@ ul li{
     width: 25px;
     height: 25px;
     margin-top: 1em;
-    
+    margin-left: 1em;
+    border: none;
+    outline: none;
+}
+
+.upArrow{
+    width: 25px;
+    height: 25px;
+    margin-top: 1em;
+    /* margin-right: 1em; */
+    border: none;
+    outline: none;
+}
+
+.downArrow{
+    width: 25px;
+    height: 25px;
+    margin-top: 1em;
+    margin-right: 0.5em;
     border: none;
     outline: none;
 }
@@ -118,6 +138,14 @@ ul li{
 }
 
 .delete:hover{
+    transform: translateY(1px);
+}
+
+.upArrow:hover{
+    transform: translateY(1px);
+}
+
+.downArrow:hover{
     transform: translateY(1px);
 }
 
@@ -232,13 +260,12 @@ ul li{
     margin-left: 15px !important; 
     width: 60% !important;
     margin-top: 6px; 
-    height: 50px !important;
-}
-#searchText {
-    height: 40px !important;
-    width: 90% !important;
 }
 
+#searchText {
+    width: 79% !important;
+    max-height: 200px;
+}
 #header {
     border-style: solid;
 }
@@ -352,4 +379,10 @@ ul li{
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+
+  .dark_mode {
+    background-color: black;
+    color: white;
   }

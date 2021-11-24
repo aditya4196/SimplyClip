@@ -17,15 +17,20 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+const checkbox = document.getElementById('dark_mode')
+checkbox.addEventListener('click',checkMode)
+
 
 let _clipboardList = document.querySelector("#clipboard_list");
 let addButton = document.getElementById('add-btn');
+
 addButton.addEventListener('click', (event) => {
         let textitem = ''
         let emptyDiv = document.getElementById('empty-div');
         let downloadDiv1 = document.getElementById('download-btn1');
         let downloadDiv2 = document.getElementById('download-btn2');
         let searchInput = document.getElementById('searchText');
+        
         emptyDiv.classList.add('hide-div');
         downloadDiv1.style.display = 'block';
         downloadDiv2.style.display = 'block';
@@ -159,14 +164,29 @@ function addClipboardListItem(text) {
         deleteDiv = document.createElement("div"),
         editDiv = document.createElement("div"),
         contentDiv = document.createElement("div"),
-        editImage = document.createElement("img");
+        editImage = document.createElement("img"),
+        upArrowImage = document.createElement("img"),
+        downArrowImage = document.createElement("img"),
+        upArrowDiv = document.createElement("div"),
+        downArrowDiv = document.createElement("div");
+
     editImage.setAttribute("data-toggle", "tooltip");
     editImage.setAttribute("data-placement", "bottom");
     editImage.setAttribute("title", "Click to edit the text entry!");
+
     let deleteImage = document.createElement("img");
     deleteImage.setAttribute("data-toggle", "tooltip");
     deleteImage.setAttribute("data-placement", "bottom");
     deleteImage.setAttribute("title", "Click to delete the text entry!");
+
+    upArrowImage.setAttribute("data-toggle", "tooltip");
+    upArrowImage.setAttribute("data-placement", "bottom");
+    upArrowImage.setAttribute("title", "Click to move up the text entry!");
+
+    downArrowImage.setAttribute("data-toggle", "tooltip");
+    downArrowImage.setAttribute("data-placement", "bottom");
+    downArrowImage.setAttribute("title", "Click to move down the text entry!");
+
     let listPara = document.createElement("p");
     let listText = document.createTextNode(text);
     listPara.setAttribute("data-toggle", "tooltip");
@@ -215,13 +235,22 @@ function addClipboardListItem(text) {
     editImage.src = './images/pencil.png';
     editImage.classList.add("edit");
     deleteImage.src = './images/delete-note.png';
-    // deleteImage.src = 'https://cdn.iconscout.com/icon/premium/png-256-thumb/delete-1432400-1211078.png'
-    deleteImage.classList.add("delete")
+    deleteImage.classList.add("delete");
+    upArrowImage.src = './images/upArrow.png';
+    upArrowImage.classList.add("upArrow");
+    downArrowImage.src = '/images/downArrow.png';
+    downArrowImage.classList.add("downArrow");
 
     editDiv.appendChild(editImage);
     contentDiv.appendChild(editDiv);
     deleteDiv.appendChild(deleteImage);
     contentDiv.appendChild(deleteDiv);
+
+    upArrowDiv.appendChild(upArrowImage);
+    contentDiv.appendChild(upArrowDiv);
+    downArrowDiv.appendChild(downArrowImage);
+    contentDiv.appendChild(downArrowDiv);
+
     contentDiv.classList.add("content");
     listItem.appendChild(contentDiv);
 
@@ -258,6 +287,43 @@ function addClipboardListItem(text) {
                 chrome.storage.sync.set({ 'originalList': originalList })
             })
             chrome.storage.sync.set({ 'list': list }, () => getClipboardText());
+        })
+    })
+
+        upArrowImage.addEventListener('click', (event) => {
+        console.log("Up arrow clicked");
+        chrome.storage.sync.get(['list'], clipboard => {
+            let list = clipboard.list;
+            let index = list.indexOf(text);
+            if(index != 0){
+                let temp=list[index];
+                list[index]=list[index-1];
+                list[index-1]=temp;
+                _clipboardList.innerHTML = "";
+            }
+
+            chrome.storage.sync.get(['listURL'], url => {
+                let urlList = url.listURL;
+                if(index != 0){
+                    let temp=urlList[index];
+                    urlList[index]=urlList[index-1];
+                    urlList[index-1]=temp;
+                    chrome.storage.sync.set({ 'listURL': urlList });
+                }
+            })
+
+            chrome.storage.sync.get(['originalList'], original => {
+                let originalList = original.originalList;
+                if(index != 0){
+                    let temp=originalList[index];
+                    originalList[index]=originalList[index-1];
+                    originalList[index-1]=temp;
+                    chrome.storage.sync.set({ 'originalList': originalList });
+                }
+            })
+
+            if(index!=0)
+                chrome.storage.sync.set({ 'list': list }, () => getClipboardText());
         })
     })
 
@@ -444,3 +510,66 @@ function deleteAllText() {
     var ul = document.getElementById("clipboard_list");
     ul.innerHTML = "";
 }
+
+/*
+ * Switching to Dark Mode or ligth mode
+ */
+
+function checkMode(){
+    if (checkbox.checked){
+        darkmodeOn()
+    }
+    else{
+        darkmodeOFF()
+    }
+}
+
+function darkmodeOn(){
+    document.body.classList.add('dark_mode')
+}
+
+function darkmodeOFF(){
+    document.body.classList.remove('dark_mode')
+}
+
+var darkmode = false;
+var myButton2 = document.getElementById('dark_mode');
+
+chrome.storage.local.get('darkmode', data => {
+    var myButton2 = document.getElementById('dark_mode');
+    darkmode = !!data.darkmode;
+    switchButton = document.getElementsByClassName('switch')[1]
+    if(darkmode==true){
+        myButton2.checked = darkmode
+        darkmodeOn()
+        switchButton.title="Click here to close dark mode!!"
+    }
+    else{
+        myButton2.checked = darkmode
+        switchButton.title="Click here to enable dark mode!!"
+    }
+});
+
+myButton2.onchange = () => {
+    darkmode = !darkmode;
+    switchButton = document.getElementsByClassName('switch')[1]
+    if(darkmode==true){
+        myButton2.checked = darkmode
+        darkmodeOn()
+        switchButton.title="Click here to close dark mode!!"
+    }
+    else{
+        myButton2.checked = darkmode
+        switchButton.title="Click here to enable dark mode!!"
+    }
+    chrome.storage.local.set({darkmode:darkmode});
+};
+
+/**
+ * Text Area height chnage based on input size
+ */
+
+let textArea = document.querySelector("#searchText");
+textArea.oninput = () => {
+    textArea.style.height = (textArea.scrollHeight)+"px";
+} 

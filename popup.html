@@ -10,12 +10,16 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 
-<body>
+<body> 
 <!--   I-Frame for script injection in order to test the extension using automated script. Uncomment the below line to test the code-->
 <!--   <iframe src="./test/test.html" style="width: 0px;height: 0px;border:0;" title="description"></iframe>-->
   <div class="container-fluid p-5 text-black">
     <label class="switch" title="Click here to save your copied text!!">
       <input type="checkbox" id="toggle-button" >
+      <span class="slider round"></span>
+    </label>
+    <label class="switch" title="Click here to swith to dark mode">
+      <input type="checkbox" id="dark_mode" >
       <span class="slider round"></span>
     </label>
     <div class="text-center">
@@ -49,7 +53,7 @@
     </div>
   </div>
   <div class="text-left" id="search">
-    <input type="text" id="searchText" class="form-control" placeholder="search for text" autofocus />
+    <textarea id="searchText" placeholder="search for text" autofocus></textarea>
   </div>
 
   <!--
@@ -66,9 +70,11 @@
       </a>
     </div>
   </div>
+
   <ul id="clipboard_list"></ul>
   <div id="snackbar">Text copied!</div>
   <script type="text/javascript" src="popup.js"></script>
 </body>
 
 </html>
+
