@@ -271,11 +271,10 @@ Users can download the list of  copied items as a document file or CSV file. The
 ## :handshake: Contributors
 
 
-1. Aditya Ravikant Jadhav (ajadhav3@ncsu.edu)
-2. Harsh Vijay Bathija (hbathij@ncsu.edu)
-3. Ashritha Bommagani (abommag@ncsu.edu)
-4. Abhishek Arvindkumar Upadhyay (aaupadhy@ncsu.edu)
-5. Akash Mukesh Sanghani (amsangha@ncsu.edu)
+1. Mery Harika Gaddam (mgaddam@ncsu.edu)
+2. Sri Lakshmi Kotha (skotha2@ncsu.ed)
+3. Tanmaiyee Battula (tbattul@ncsu.edu)
+4. Kavya Lalbahadur Joshi (kjoshi4@ncsu.edu)
 
-***Enjoy using SimplyClip. Make sure to follow the page for any new updates!*** 
+*** If you have any further queries, contact us on above emails. Enjoy using SimplyClip! ***
 
