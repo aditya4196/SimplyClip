@@ -201,7 +201,7 @@ function addClipboardListItem(text) {
     let listText = document.createTextNode(text);
     listPara.setAttribute("data-toggle", "tooltip");
     listPara.setAttribute("data-placement", "bottom");
-    listPara.setAttribute("title", "Click to copy the below text:\n" + text);
+    listPara.setAttribute("title", "Click to copy the below text:\n" + text + "\n" + "Word count:\n"+text.split(' ').length);
     listPara.classList.add("data");
     listItem.classList.add("listitem");
     let popupLink = document.createElement('a');

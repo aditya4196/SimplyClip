@@ -272,7 +272,7 @@ Users can download the list of  copied items as a document file or CSV file. The
 
 
 1. Mery Harika Gaddam (mgaddam@ncsu.edu)
-2. Sri Lakshmi Kotha (skotha2@ncsu.ed)
+2. Sri Lakshmi Kotha (skotha2@ncsu.edu)
 3. Tanmaiyee Battula (tbattul@ncsu.edu)
 4. Kavya Lalbahadur Joshi (kjoshi4@ncsu.edu)
 
