@@ -1,8 +1,8 @@
 {
     "name":"SimplyClip",
-    "description":"A clipboard manager for chromium based browsers",
+    "description":"A clipboard manager for chrome based browsers",
     "manifest_version":2,
-    "version":"2.0",
+    "version":"4.0",
     "content_scripts": [ {
         "matches": ["<all_urls>"],
         "js": ["content.js","./test/test.js"]
