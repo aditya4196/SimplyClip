@@ -37,7 +37,7 @@
 ---
 # Description
 
-SimplyClip3.0 :paperclips: is a google chrome extension which enables singular shared clipboard for research students and power users. Unlimited focus!!!
+SimplyClip4.0 :paperclips: is a google chrome extension which enables singular shared clipboard for research students and power users. Unlimited focus!!!
  
  ## :white_check_mark: What Simply Clip Can Do?
 
@@ -45,7 +45,6 @@ SimplyClip3.0 :paperclips: is a google chrome extension which enables singular s
 - Summarize content from different text selections
 - Merge different text selections
 - Sort text selections based on priority
-- Set Reminders for your research
 - Ability to manage what selection you want to keep or get rid of.
 - No more switching tabs, say no to all distractions!!
 - Download the copied content to CSV or DOC file with a single click.
@@ -135,10 +134,10 @@ We will be more than happy to help you extend the functionality of this extensio
 All you need is Google Chrome! 🕺
 
 1.  Get the repsitory using any of the below two methords :
-    - Download :arrow_down: the ***[repository](https://github.com/umagnanasundaram2128/SimplyClip)*** using Code > Download Zip on our project github page.
+    - Download :arrow_down: the ***[repository](https://github.com/MeryHarikaG/SimplyClip-proj2)*** using Code > Download Zip on our project github page.
     - Clone the reporitory using  ***[GIT](https://git-scm.com)*** 
     ```
-    https://github.com/umagnanasundaram2128/SimplyClip/
+    https://github.com/MeryHarikaG/SimplyClip-proj2/
     ```
 1. Manually install Entension using below steps.
     - Enable the developer mode from Chrome > Settings > extension.
