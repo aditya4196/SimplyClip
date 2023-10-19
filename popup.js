@@ -604,7 +604,7 @@ function searchClipboardText() {
 }
 
 
-var enabled = false;
+var enabled = true;
 var myButton = document.getElementById('toggle-button');
 
 chrome.storage.local.get('enabled', data => {
