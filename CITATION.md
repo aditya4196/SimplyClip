@@ -1,16 +1,15 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5733516.svg)](https://doi.org/10.5281/zenodo.5733516)
-  ```yaml
-  version: 2.2.0
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023463.svg)](https://doi.org/10.5281/zenodo.10023463)
+```yaml
+  version: 4.0.0
   authors:
-    - Ashritha Bommagani
-    - Abhishek Upadhyay
-    - Aditya Ravikant Jadhav
-    - Harsh Vijay Bathija
-    - Akash Mukesh Sanghani
+    - Mery Harika Gaddam
+    - Sri Lakshmi Kotha
+    - Tanmaiyee Battula
+    - Kavya Lalbahadur Joshi
   license: MIT License
-  repository-code: https://github.com/aditya4196/SimplyClip
+  repository-code: https://github.com/MeryHarikaG/SimplyClip-proj2
   identifiers:
-  - description: This is the collection of archived snapshots of version 3.2.0 of ReadME
+  - description: This is the collection of archived snapshots of version 4.0.0 of ReadME
     type: doi
-    value: 10.5281/zenodo.5733516
+    value: 10.5281/zenodo.10023463
   ```
