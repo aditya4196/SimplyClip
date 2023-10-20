@@ -32,7 +32,7 @@
 ---
 
  
-&emsp; &emsp; &emsp; &emsp; &emsp;  ![](https://github.com/aditya4196/SimplyClip/blob/main/images/SimplyClip.gif)
+&emsp; &emsp; &emsp; &emsp; &emsp;  ![](https://github.com/MeryHarikaG/SimplyClip-proj2/blob/Group10DeveloperBranch/images/SimplyClip_title.jpeg)
 
 ---
 # Description
