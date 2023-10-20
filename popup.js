@@ -210,7 +210,14 @@ function addClipboardListItem(text) {
 
     if (imageUrl.length > 0) {
         console.log("IMage Url found")
-        imagePopup.src = './images/url2.png';
+        if(imageUrl.includes("youtube.com"))
+        {
+            imagePopup.src = './images/youtube_icon.png';
+        }
+        else
+        {
+            imagePopup.src = './images/url_icon.png';
+        }
         if (!isVideo) {
             imagePopup.style.width = '32px'
             imagePopup.style.height = '32px';
