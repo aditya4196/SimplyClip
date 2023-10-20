@@ -1,9 +1,4 @@
-
-<!-- ![icon](https://github.com/umagnanasundaram2128/SimplyClip/blob/main/images/paper-clip_32.png)
-# SimplyClip -->
-
-
-[![DOI](https://zenodo.org/badge/429889373.svg)](https://zenodo.org/badge/latestdoi/429889373)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023463.svg)](https://doi.org/10.5281/zenodo.10023463)
 
 
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m789313708-ea25af592e8a7a84c009055e)
@@ -16,7 +11,6 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/MeryHarikaG/SimplyClip-proj2)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/MeryHarikaG/SimplyClip-proj2)
 [![GitHub-size](https://img.shields.io/github/languages/code-size/MeryHarikaG/SimplyClip-proj2)](https://github.com/MeryHarikaG/SimplyClip-proj2)
-[![basic badge](https://github.com/MeryHarikaG/SimplyClip-proj2/actions/workflows/coverage.yml/badge.svg)](https://github.com/MeryHarikaG/SimplyClip-proj2/actions/workflows/coverage.yml/badge.svg)
 [![Coverage Status](https://img.shields.io/badge/code%20coverage-88%25-brightgreen)](https://github.com/MeryHarikaG/SimplyClip-proj2#-testcase-coverage)
 
 ### &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;:paperclips: &emsp;  Clipboard Made Easy For Research &emsp; :paperclips:
