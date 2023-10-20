@@ -263,7 +263,7 @@ function addClipboardListItem(text) {
     upArrowImage.classList.add("upArrow");
     downArrowImage.src = '/images/downArrow.png';
     downArrowImage.classList.add("downArrow");
-    summImage.src = './images/summarize.png';
+    summImage.src = './images/summarizer.png';
     summImage.classList.add("summarize");
 
     var checkbox = document.createElement('input');
